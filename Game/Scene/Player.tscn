@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bxdpnwq3311py"]
+
+[ext_resource type="Texture2D" uid="uid://cxtigt3e5dn7h" path="res://Asset/Animations/Player_Idle.png" id="1_quvlg"]
+[ext_resource type="Texture2D" uid="uid://c37tnkrxc03rb" path="res://Asset/Animations/Shadow.png" id="2_dikuv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8lcb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eeal"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvxg0"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mud5u"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvocf"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmp2f"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pik8"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adgam"]
+atlas = ExtResource("1_quvlg")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j8lcb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eeal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvxg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mud5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvocf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmp2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pik8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adgam")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1459708145]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458655187]
+visible = false
+shape = SubResource("CircleShape2D_j8lcb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299198814]
+sprite_frames = SubResource("SpriteFrames_j8lcb")
+autoplay = "default"
+frame_progress = 0.0073769493
+offset = Vector2(0, -20)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=330920686]
+position = Vector2(0, -1)
+texture = ExtResource("2_dikuv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1958430621]
+zoom = Vector2(3, 3)

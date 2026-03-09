@@ -1,0 +1,22 @@
+[gd_scene format=4 uid="uid://nuclym66v77c"]
+
+[ext_resource type="Texture2D" uid="uid://5h7aiwkmrmsr" path="res://Asset/Level/Background_Grass.png" id="1_lv82p"]
+[ext_resource type="PackedScene" uid="uid://bxdpnwq3311py" path="res://Game/Scene/Player.tscn" id="2_w1egk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6ejq"]
+texture = ExtResource("1_lv82p")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wr7s0"]
+tile_size = Vector2i(256, 256)
+sources/0 = SubResource("TileSetAtlasSource_g6ejq")
+
+[node name="Node2D" type="Node2D" unique_id=821531608]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=149572365]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_wr7s0")
+
+[node name="Player" parent="." unique_id=1459708145 instance=ExtResource("2_w1egk")]
+position = Vector2(474, 360)
