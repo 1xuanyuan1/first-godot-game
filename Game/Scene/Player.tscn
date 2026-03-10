@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bxdpnwq3311py"]
 
+[ext_resource type="Script" uid="uid://77afiqaofbdw" path="res://Game/Script/Player.cs" id="1_dikuv"]
 [ext_resource type="Texture2D" uid="uid://cxtigt3e5dn7h" path="res://Asset/Animations/Player_Idle.png" id="1_quvlg"]
 [ext_resource type="Texture2D" uid="uid://c37tnkrxc03rb" path="res://Asset/Animations/Shadow.png" id="2_dikuv"]
 
@@ -64,6 +65,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=1459708145]
 y_sort_enabled = true
+script = ExtResource("1_dikuv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=458655187]
 visible = false
@@ -72,7 +74,7 @@ shape = SubResource("CircleShape2D_j8lcb")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299198814]
 sprite_frames = SubResource("SpriteFrames_j8lcb")
 autoplay = "default"
-frame_progress = 0.0073769493
+frame_progress = 0.13091528
 offset = Vector2(0, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=330920686]
