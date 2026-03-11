@@ -48,6 +48,7 @@ public partial class Player2 : CharacterBody2D
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j8lcb"]
+radius = 6.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3eeal"]
 atlas = ExtResource("1_quvlg")
@@ -522,10 +523,11 @@ shape = SubResource("CircleShape2D_j8lcb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1299198814]
 sprite_frames = SubResource("SpriteFrames_j8lcb")
-animation = &"Run_Up"
+animation = &"Idle_Down"
 offset = Vector2(0, -20)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=330920686]
+modulate = Color(1, 1, 1, 0.5882353)
 position = Vector2(0, -1)
 texture = ExtResource("2_dikuv")
 
