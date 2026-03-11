@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5h7aiwkmrmsr" path="res://Asset/Level/Background_Grass.png" id="1_lv82p"]
 [ext_resource type="PackedScene" uid="uid://bxdpnwq3311py" path="res://Game/Scene/Player.tscn" id="2_w1egk"]
+[ext_resource type="Script" uid="uid://77afiqaofbdw" path="res://Game/Script/Player.cs" id="3_w1egk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6ejq"]
 texture = ExtResource("1_lv82p")
@@ -20,3 +21,4 @@ tile_set = SubResource("TileSet_wr7s0")
 
 [node name="Player" parent="." unique_id=1459708145 instance=ExtResource("2_w1egk")]
 position = Vector2(474, 360)
+script = ExtResource("3_w1egk")
